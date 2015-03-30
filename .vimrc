@@ -216,7 +216,6 @@ let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_loc_list_height = 5 " Use this option to specify the height of the location lists that syntastic opens
 let g:syntastic_auto_loc_list = 2 " Auto close error window, but do not open automatically
 
-
 " check JS as ES (will parse JSX also)
 let g:syntastic_javascript_checkers = ['eslint']
 

@@ -25,5 +25,5 @@ windows:
         - zeus start
   - server: fs
   - sso: cd ~/src/sso_server/; fs
-  - solid_octane: cd ~/src/solid_octane_service/; port=3000 foreman start
+  - discovery: cd ~/src/discovery_users/; script/start_all.sh
 

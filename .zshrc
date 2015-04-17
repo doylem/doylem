@@ -41,6 +41,8 @@ alias fs='bundle exec foreman start'
 alias dbm='bundle exec rake db:migrate'
 alias capdep='bundle exec cap deploy'
 alias dep='script/deploy_green'
+alias zc='zeus cucumber'
+alias zr='zeus rspec'
 
 # Boxen / puppet
 alias boxen='boxen --stealth --debug --profile'
@@ -79,8 +81,8 @@ alias gtp='git stash pop'
 alias tp='git stash pop'
 alias gr='git reset'
 alias r='git reset'
-
 alias gfw='git fixws'
+alias gcp='git cherry-pick'
 
 # these alias ignore changes to file
 alias gignore='git update-index --assume-unchanged'

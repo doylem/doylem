@@ -24,5 +24,5 @@ windows:
         - gulp test-dev
         - gulp build-dev
   - server: fs
-  - backend: cd ~/src/loading_bay_backend/; fs web
+  - backend: cd ~/src/loading_bay_backend/; (bundle check || bundle install --local) && fs web
 

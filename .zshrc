@@ -74,7 +74,8 @@ alias gsp='git smart-pull'
 alias gt='git tree'
 alias gb='git b'
 alias gbk='git buildkite'
-alias gmm='git merge --no-ff master'
+alias gmm='git smart-merge master'
+alias gsm='git smart-merge'
 alias gt='git stash'
 alias t='git stash'
 alias gtp='git stash pop'
@@ -83,6 +84,8 @@ alias gr='git reset'
 alias r='git reset'
 alias gfw='git fixws'
 alias gcp='git cherry-pick'
+alias gl='git smart-log'
+alias l='git smart-log'
 
 # these alias ignore changes to file
 alias gignore='git update-index --assume-unchanged'
@@ -90,11 +93,7 @@ alias gunignore='git update-index --no-assume-unchanged'
 # list temporarily ignored files
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 
-# temporary ignore for api utils on loading bay
-alias gi='gignore app/assets/js/util/APIUtils.coffee'
-alias gu='gunignore app/assets/js/util/APIUtils.coffee'
-
-# Cleans all old branches
+# Cleans all old branches - pretty horrifically, be careful
 alias gbclean='for i in $(git branch -l); do git branch -d $i; done'
 
 # Push to current branch

@@ -93,8 +93,8 @@ alias gunignore='git update-index --no-assume-unchanged'
 # list temporarily ignored files
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 
-# Cleans all old branches - pretty horrifically, be careful
-alias gbclean='for i in $(git branch -l); do git branch -d $i; done'
+# Cleans all old branches
+alias gbclean='git branch --merged | xargs git branch -d'
 
 # Push to current branch
 function branch() {

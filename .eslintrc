@@ -5,7 +5,9 @@
     "jsx": true
   },
   "ecmaFeatures": {
-    "jsx": true
+    "jsx": true,
+    "modules": true,
+    "module": true
   },
   "rules": {
     "strict": 0,

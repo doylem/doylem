@@ -23,7 +23,7 @@ windows:
         - vim
         - 
         - zeus start
-  - server: fs
+  - server: (bundle check || bundle install --local) && fs
   - discovery: cd ~/src/discovery_users/; script/start_all.sh
   - sso: cd ~/src/sso_server/; (bundle check || bundle install --local) && fs
 

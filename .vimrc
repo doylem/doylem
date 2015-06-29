@@ -154,7 +154,7 @@ nmap <silent> <A-Right> :wincmd l<CR>
 map <leader>jt !python -m json.tool<CR>
 
 " ,(spacebar) to remove all extraneous whitepace  - WARNING, causes crazy git diffs
-" map ,<SPACE> :%s/\s\+$//e<CR><Esc>:nohlsearch<CR>
+map ,<SPACE> :%s/\s\+$//e<CR><Esc>:nohlsearch<CR>
 
 " This beauty remembers where you were the last time you edited the file, and returns to the same position.
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif

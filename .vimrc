@@ -244,6 +244,7 @@ autocmd BufReadPre *.js,*.coffee,*.cjsx let b:javascript_lib_use_jasmine = 1
 """"""""""""""""
 set tabline=%!tabber#TabLine()
 let g:tabber_wrap_when_shifting = 1
+let g:tabber_divider_style = 'fancy'
 
 nnoremap <silent> <C-t>            :999TabberNew<CR>
 nnoremap <silent> <Leader><Leader> :TabberSelectLastActive<CR>

@@ -24,6 +24,6 @@ windows:
         - 
         - zeus start
   - server: (bundle check || bundle install --local) && fs
-  - discovery: cd ~/src/discovery_users/; echo "To start discovery services: ./discovery up"; echo "To see the logs: docker-compose logs"
+  - discovery: cd ~/src/discovery_users/; echo './discovery up; docker-compose logs'
   - sso: cd ~/src/sso_server/; (bundle check || bundle install --local) && fs
 

@@ -24,6 +24,6 @@ windows:
         - 
         - zeus start
   - server: (bundle check || bundle install --local) && fs
-  - discovery: cd ~/src/discovery_users/; script/start_all.sh
+  - discovery: cd ~/src/discovery_users/; echo "./discovery up"
   - sso: cd ~/src/sso_server/; (bundle check || bundle install --local) && fs
 

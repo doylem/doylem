@@ -53,8 +53,8 @@ alias mmp="mux mp"
 alias mlb="mux lb"
 alias tml="tmux list-sessions"
 alias tmk="tmux kill-session -t mp; tmux kill-session -t lb"
-alias kmp="tmux kill-session -t mp"
-alias klb="tmux kill-session -t lb"
+alias tmkmp="tmux kill-session -t mp"
+alias tmklb="tmux kill-session -t lb"
 
 # git stuff
 alias gco='git checkout'
@@ -76,6 +76,7 @@ alias gb='git branch'
 alias gbk='git buildkite'
 alias gmm='git smart-merge master'
 alias gsm='git smart-merge'
+alias gcm='git checkout master'
 alias gt='git stash'
 alias t='git stash'
 alias gtp='git stash pop'

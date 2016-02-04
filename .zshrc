@@ -49,8 +49,8 @@ alias boxen='boxen --stealth --debug --profile'
 
 # tmux
 alias tmux="TERM=screen-256color-bce tmux"
-alias mmp="mux mp"
-alias mlb="mux lb"
+alias mmp="cd ~/mp; mux mp"
+alias mlb="cd ~/lb; mux lb"
 alias tml="tmux list-sessions"
 alias tmk="tmux kill-session -t mp; tmux kill-session -t lb"
 alias tmkmp="tmux kill-session -t mp"

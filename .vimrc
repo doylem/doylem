@@ -157,7 +157,11 @@ map <leader>jt !python -m json.tool<CR>
 map ,<SPACE> :%s/\s\+$//e<CR><Esc>:nohlsearch<CR>
 
 " This beauty remembers where you were the last time you edited the file, and returns to the same position.
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+" au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+" go to last cursor position when opening files
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") && &ft != 'gitcommit'
+                              \| exe "normal g'\"" | endif
 
 " make sure json files use json syntax highlighting
 au! BufRead,BufNewFile *.json set filetype=json 

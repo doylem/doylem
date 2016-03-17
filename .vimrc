@@ -338,6 +338,7 @@ let g:ctrlp_working_path_mode = 0
 " Ignore these directories
 set wildignore+=*/out/**
 set wildignore+=*/vendor/**
+set wildignore+=*/node_modules/**
 
 " Search in certain directories a large project (hardcoded for now)
 cnoremap %projmp <c-r>=expand('~/src/marketplace')<cr>

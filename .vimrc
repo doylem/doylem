@@ -326,6 +326,23 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 map #5 :NERDTreeTabsToggle<CR>
 
 
+" NERDTree File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+
+
 """""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -390,7 +407,10 @@ endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
-
+""""""""""""""""""""""""""""""""""""
+" vim-devicons
+""""""""""""""""""""""""""""""""""""
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 """"""""""""""""""""""""""""""""""""""""""""""
 """"""""" Pathogen
@@ -414,7 +434,6 @@ colorscheme solarized
 " I want fancy powerline symbols everywhere
 let g:airline_powerline_fonts = 1
 
-
 """""""""""""""""""""""""""""""""""""""""""""""
 " GUI Settings
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -437,3 +456,6 @@ if has("gui_vimr")
     set guioptions-=e
 endif
 
+if exists("g:loaded_webdevicons")
+    call webdevicons#refresh()
+endif

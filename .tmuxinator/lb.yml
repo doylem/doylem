@@ -24,6 +24,6 @@ windows:
         - npm run test-dev
   - server: (bundle check || bundle install --local) && fs
   - api: cd ~/src/loading_bay_backend/; (bundle check || bundle install --local) && fs web
-  - sso: cd ~/src/sso_server/; (bundle check || bundle install --local) && fs
+  - rails: cd ~/src/loading_bay_backend/; rails c
   - npm: ncu
 

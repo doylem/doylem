@@ -26,6 +26,6 @@ windows:
   - contributor: npm run dev:contributor
   - backend: cd ~/src/elements-backend; ./script/uptodate && foreman start
   - rails: cd ~/src/elements-backend; rails c
-  - redis: redis-server
+  - redis: cd ~; redis-server
   - elasticsearch: elasticsearch
 

@@ -112,6 +112,9 @@ alias p='git push origin $(branch)'
 alias csvdump='cd ~/src/loading_bay_backend/; cap db:pg_dump_and_restore_local && rake metadata:extract | gzip > ~/Desktop/loading-bay_db_export_`date +%Y%m%dT%H%M%S`.csv.gz'
 
 
+# Elements
+alias mel="cd ~/src/elements_frontend; mux el"
+
 export PATH=~/bin:$PATH
 
 export NVM_DIR="/Users/doylem/.nvm"

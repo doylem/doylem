@@ -20,7 +20,7 @@ windows:
   - main:
       layout: 8023,204x51,0,0[204x42,0,0,0,204x8,0,43{139x8,0,43,2,64x8,140,43,3}]
       panes:
-        - vim
+        - npm run dev
         - npm run test-dev
   - server: (bundle check || bundle install --local) && fs
   - api: cd ~/src/loading_bay_backend/; (bundle check || bundle install --local) && fs web

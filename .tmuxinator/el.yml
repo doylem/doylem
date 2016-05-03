@@ -27,4 +27,5 @@ windows:
   - backend: cd ~/src/elements-backend; ./script/uptodate && foreman start
   - rails: cd ~/src/elements-backend; rails c
   - redis: cd ~; redis-server
+  - styleguide: npm run styleguide
 

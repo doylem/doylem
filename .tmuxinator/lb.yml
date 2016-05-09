@@ -23,7 +23,7 @@ windows:
         - npm run dev
         - npm run test-dev
   - server: (bundle check || bundle install --local) && fs
-  - api: cd ~/src/loading_bay_backend/; (bundle check || bundle install --local) && fs web
+  - api: cd ~/src/loading_bay_backend/; (bundle check || bundle install --local) && bundle exec foreman start web=1,sidekiq=1
   - rails: cd ~/src/loading_bay_backend/; rails c
   - npm: ncu
 

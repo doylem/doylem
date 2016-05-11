@@ -26,4 +26,5 @@ windows:
   - api: cd ~/src/loading_bay_backend/; (bundle check || bundle install --local) && bundle exec foreman start web=1,sidekiq=1
   - rails: cd ~/src/loading_bay_backend/; rails c
   - npm: ncu
+  - redis: cd ~/src/loading_bay_backend/; redis-server
 

@@ -20,8 +20,8 @@ windows:
   - main:
       layout: 8023,204x51,0,0[204x42,0,0,0,204x8,0,43{139x8,0,43,2,64x8,140,43,3}]
       panes:
-        - vim
-        -
+        - elasticsearch
+        - echo "To reindex: cd ~/src/elements-backend; ./script/items/reindex_all.sh doylem" 
   - storefront: npm run dev:storefront 
   - contributor: npm run dev:contributor
   - backend: cd ~/src/elements-backend; ./script/uptodate && foreman start

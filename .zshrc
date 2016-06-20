@@ -120,3 +120,31 @@ export PATH=~/bin:$PATH
 export NVM_DIR="/Users/doylem/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+function _keychain() {
+  keychain="envato.keychain"
+  service="elements-development"
+  key=${1}
+  security find-generic-password -a $service -s $key -w $keychain
+}
+
+function _keychain_hex() {
+  _keychain $1 | perl -pe 's/([0-9a-f]{2})/chr hex $1/gie'
+}
+
+function elements-environment() {
+  AWS_ACCESS_KEY_ID=$(_keychain aws_access_key_id) \
+  AWS_SECRET_ACCESS_KEY=$(_keychain aws_secret_access_key) \
+  BRAINTREE_ENVIRONMENT=$(_keychain braintree_environment) \
+  BRAINTREE_MERCHANT_ID=$(_keychain braintree_merchant_id) \
+  BRAINTREE_PUBLIC_KEY=$(_keychain braintree_public_key) \
+  BRAINTREE_PRIVATE_KEY=$(_keychain braintree_private_key) \
+  CLOUDFRONT_KEY_PAIR_ID=$(_keychain cloudfront_key_pair_id) \
+  CLOUDFRONT_KEY_PAIR=$(_keychain_hex cloudfront_key_pair) \
+  CLOUDFRONT_DOMAIN=$(_keychain cloudfront_domain) \
+  CLOUDINARY_CLOUD_NAME=$(_keychain cloudinary_cloud_name) \
+  CLOUDINARY_API_KEY=$(_keychain cloudinary_api_key) \
+  CLOUDINARY_API_SECRET=$(_keychain cloudinary_api_secret) \
+  $*
+}
+alias ee="elements-environment"
+

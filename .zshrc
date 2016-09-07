@@ -108,6 +108,7 @@ ref=$(git symbolic-ref HEAD)
 }
 alias gp='git push origin $(branch)'
 alias p='git push origin $(branch)'
+alias pstage='git push -f origin $(branch):staging'
 
 alias csvdump='cd ~/src/loading_bay_backend/; cap db:pg_dump_and_restore_local && rake metadata:extract | gzip > ~/Desktop/loading-bay_db_export_`date +%Y%m%dT%H%M%S`.csv.gz'
 

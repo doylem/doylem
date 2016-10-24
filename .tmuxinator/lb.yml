@@ -20,11 +20,8 @@ windows:
   - main:
       layout: 8023,204x51,0,0[204x42,0,0,0,204x8,0,43{139x8,0,43,2,64x8,140,43,3}]
       panes:
-        - npm run dev
+        - (bundle check || bundle install --local) && foreman start
         - npm run test-dev
-  - server: (bundle check || bundle install --local) && foreman start
   - api: cd ~/src/loading_bay_backend/; (bundle check || bundle install --local) && bundle exec foreman start web=1,sidekiq=1
-  - rails: cd ~/src/loading_bay_backend/; rails c
   - npm: npm outdated
-  - redis: cd ~/src/loading_bay_backend/; redis-server
 

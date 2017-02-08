@@ -151,3 +151,7 @@ function elements-environment() {
 }
 alias ee="elements-environment"
 
+# Yarn
+export PATH="$PATH:`yarn global bin`"
+
+

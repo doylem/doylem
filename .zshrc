@@ -118,8 +118,6 @@ source ~/.bin/tmuxinator.zsh
 # Elements
 alias mel="cd ~/src/elements_frontend; mux el"
 
-export PATH=~/bin:$PATH
-
 export NVM_DIR="/Users/doylem/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -151,7 +149,7 @@ function elements-environment() {
 }
 alias ee="elements-environment"
 
-# Yarn
+# PATH extensions
+export PATH=$PATH:~/bin:/opt/boxen/homebrew/Cellar/elasticsearch@2.4/2.4.5/bin
 export PATH="$PATH:`yarn global bin`"
-
 

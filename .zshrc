@@ -151,6 +151,4 @@ function elements-environment() {
 alias ee="elements-environment"
 
 # PATH extensions
-export PATH=$PATH:~/bin:/opt/boxen/homebrew/Cellar/elasticsearch@2.4/2.4.5/bin
-export PATH="$PATH:`yarn global bin`"
-
+export PATH=$PATH:~/bin:/opt/boxen/homebrew/Cellar/elasticsearch@2.4/2.4.5/bin:~/.yarn/bin

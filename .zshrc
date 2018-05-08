@@ -93,6 +93,8 @@ alias gcp='git cherry-pick'
 alias gl='git smart-log'
 alias l='git smart-log'
 
+alias rubocop='bundle exec rubocop'
+
 # these alias ignore changes to file
 alias gignore='git update-index --assume-unchanged'
 alias gunignore='git update-index --no-assume-unchanged'
@@ -136,10 +138,6 @@ function _keychain_hex() {
 function elements-environment() {
   AWS_ACCESS_KEY_ID=$(_keychain aws_access_key_id) \
   AWS_SECRET_ACCESS_KEY=$(_keychain aws_secret_access_key) \
-  BRAINTREE_ENVIRONMENT=$(_keychain braintree_environment) \
-  BRAINTREE_MERCHANT_ID=$(_keychain braintree_merchant_id) \
-  BRAINTREE_PUBLIC_KEY=$(_keychain braintree_public_key) \
-  BRAINTREE_PRIVATE_KEY=$(_keychain braintree_private_key) \
   CLOUDFRONT_KEY_PAIR_ID=$(_keychain cloudfront_key_pair_id) \
   CLOUDFRONT_KEY_PAIR=$(_keychain_hex cloudfront_key_pair) \
   CLOUDFRONT_DOMAIN=$(_keychain cloudfront_domain) \

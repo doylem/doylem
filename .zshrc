@@ -36,26 +36,14 @@ alias vi='vim'
 
 # Ruby
 alias be='bundle exec'
-alias bi='bundle install --local'
+alias bi='bundle install'
+alias bil='bundle install --local'
 alias fs='bundle exec foreman start'
 alias dbm='bundle exec rake db:migrate; git checkout db/schema.rb; git checkout db/structure.sql'
 alias dbs='bundle exec rake db:seed'
-alias capdep='bundle exec cap deploy'
-alias dep='script/deploy_green'
-alias zc='zeus cucumber'
-alias zr='zeus rspec'
 
 # Boxen / puppet
 alias boxen='boxen --stealth --debug --profile'
-
-# tmux
-alias tmux="TERM=screen-256color-bce tmux"
-alias mmp="cd ~/mp; mux mp"
-alias mlb="cd ~/lb; mux lb"
-alias tml="tmux list-sessions"
-alias tmk="tmux kill-session -t mp; tmux kill-session -t lb"
-alias tmkmp="tmux kill-session -t mp"
-alias tmklb="tmux kill-session -t lb"
 
 # git stuff
 alias gco='git checkout'

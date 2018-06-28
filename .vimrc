@@ -150,9 +150,6 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-" format JSON files all prettyish
-map <leader>jt !python -m json.tool<CR>
-
 " ,(spacebar) to remove all extraneous whitepace  - WARNING, causes crazy git diffs
 map ,<SPACE> :%s/\s\+$//e<CR><Esc>:nohlsearch<CR>
 

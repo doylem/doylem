@@ -193,32 +193,6 @@ set timeoutlen=1000 ttimeoutlen=0
 let g:semanticTermColors = [28,1,2,3,4,5,6,7,25,9,10,34,12,13,14,15,16,125,124,19]
 :nnoremap <Leader>sh :SemanticHighlightToggle<cr>
 
-""""""""""""""""
-" Syntastic
-""""""""""""""""
-" Syntastic plugin next/prev
-nnoremap <c-n> :lnext<CR>
-nnoremap <c-N> :lnext<CR>
-
-" Recommended default settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_loc_list_height = 5 " Use this option to specify the height of the location lists that syntastic opens
-let g:syntastic_auto_loc_list = 2 " Auto close error window, but do not open automatically
-
-" check JS as ES (will parse JSX also)
-let g:syntastic_javascript_checkers = ['eslint']
-
-" vim-jsx
-let g:jsx_ext_required = 0
 
 """"""""""""""""
 " vim-javascript
@@ -426,7 +400,7 @@ let g:solarized_contrast="high"
 let g:solarized_termcolors=16
 
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 " I want fancy powerline symbols everywhere
 let g:airline_powerline_fonts = 1

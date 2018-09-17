@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/opt/boxen/repo/modules/people/manifests/doylem'
-let g:netrw_dirhist_2='/Users/doylem/src/marketplace/app/assets/stylesheets'
-let g:netrw_dirhist_3='/Users/doylem/src/marketplace/app/assets'
-let g:netrw_dirhist_4='/Users/doylem'
-let g:netrw_dirhist_5='/Users/doylem/Applications'
-let g:netrw_dirhist_6='/Users/doylem/src/marketplace/app/views/licensing/licenses'
-let g:netrw_dirhist_7='/Users/doylem/src/iodized/priv/ui/app/js/react/feature'
-let g:netrw_dirhist_8='/Users/doylem/src/loading_bay'
-let g:netrw_dirhist_9='/Users/doylem/src/loading_bay/app/loading_bay'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/doylem/.oh-my-zsh'

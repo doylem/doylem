@@ -196,3 +196,4 @@ source ~/.bash_profile
 unsetopt inc_append_history
 unsetopt share_history
 
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"

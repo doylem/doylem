@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -lah'
 alias vi='vim'
 alias psg='ps aux | grep'
+alias cat='bat'
 
 # Ruby
 alias be='bundle exec'

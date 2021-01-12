@@ -198,7 +198,7 @@ unsetopt share_history
 unsetopt nomatch
 
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-export GEM_HOME="$HOME/.gem"
+# export GEM_HOME="$HOME/.gem"
 
 
 export NVM_DIR="$HOME/.nvm"
